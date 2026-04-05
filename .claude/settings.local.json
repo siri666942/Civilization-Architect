@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m tests.simulation_runner)",
+      "Bash(python -m tests.diagnostic_test)",
+      "Bash(python -c \"from backend import GameEngine, ArchitectureType; print\\(''导入成功''\\)\")",
+      "Bash(python -c \"from backend import GameEngine, ArchitectureType, GameConfig; print\\(''导入成功！''\\)\")",
+      "Bash(python -m backend.tests.simulation_runner)",
+      "Bash(python -m backend.common.param_levels)",
+      "Bash(python -m backend.models.psychology_v2)"
+    ]
+  }
+}

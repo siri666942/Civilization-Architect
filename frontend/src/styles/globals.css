@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 全局样式 */
+:root {
+  --cyber-accent: #00f0ff;
+  --cyber-accent-alt: #ff00ff;
+  --cyber-success: #39ff14;
+  --cyber-danger: #ff3131;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #0a0e17 0%, #111827 100%);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(26, 31, 46, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 240, 255, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 240, 255, 0.5);
+}
+
+/* 发光边框效果 */
+.glow-border {
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.1);
+}
+
+.glow-border:hover {
+  border-color: rgba(0, 240, 255, 0.4);
+  box-shadow: 0 0 30px rgba(0, 240, 255, 0.2);
+}
+
+/* 玻璃效果 */
+.glass {
+  background: rgba(26, 31, 46, 0.85);
+  backdrop-filter: blur(10px);
+}
+
+/* 霓虹文字 */
+.neon-text {
+  text-shadow: 0 0 10px var(--cyber-accent), 0 0 20px var(--cyber-accent), 0 0 30px var(--cyber-accent);
+}
+
+/* 进度条动画 */
+.progress-bar {
+  @apply h-2 rounded-full overflow-hidden;
+  background: rgba(0, 240, 255, 0.1);
+}
+
+.progress-bar-fill {
+  @apply h-full rounded-full transition-all duration-500;
+  background: linear-gradient(90deg, var(--cyber-accent), var(--cyber-success));
+}
+
+/* 按钮样式 */
+.btn-primary {
+  @apply px-6 py-3 rounded-lg font-heading font-semibold transition-all duration-300;
+  background: linear-gradient(135deg, #00f0ff, #00b4d8);
+  color: #0a0e17;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(0, 240, 255, 0.5);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  @apply px-6 py-3 rounded-lg font-heading font-semibold transition-all duration-300;
+  background: transparent;
+  border: 1px solid rgba(0, 240, 255, 0.5);
+  color: #00f0ff;
+}
+
+.btn-secondary:hover {
+  background: rgba(0, 240, 255, 0.1);
+}
+
+/* 卡片样式 */
+.card {
+  @apply rounded-xl p-4 transition-all duration-300;
+  background: rgba(26, 31, 46, 0.85);
+  border: 1px solid rgba(0, 240, 255, 0.15);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 240, 255, 0.4);
+  box-shadow: 0 0 30px rgba(0, 240, 255, 0.15);
+}
+
+/* 输入框样式 */
+.input-cyber {
+  @apply w-full px-4 py-3 rounded-lg font-body transition-all duration-300;
+  background: rgba(10, 14, 23, 0.8);
+  border: 1px solid rgba(107, 114, 128, 0.3);
+  color: #e8eaed;
+}
+
+.input-cyber::placeholder {
+  color: #6b7280;
+}
+
+.input-cyber:focus {
+  outline: none;
+  border-color: #00f0ff;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
+}
+
+/* Agent卡片颜色 */
+.agent-border-leader { border-color: #ffd700; }
+.agent-border-honest { border-color: #39ff14; }
+.agent-border-ambitious { border-color: #ff3131; }
+.agent-border-social { border-color: #00f0ff; }
+.agent-border-analyst { border-color: #a855f7; }
+.agent-border-default { border-color: #6b7280; }
